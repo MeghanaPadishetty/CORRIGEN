@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07101f">
+  <title>CORRIGEN — Correction Operations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;550;600;650;700;750;800&family=JetBrains+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/enterprise.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#dashboard" aria-label="CORRIGEN dashboard"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M8 6v20M8 8h8.5a5 5 0 0 1 5 5M8 16h9M8 24h8.5a5 5 0 0 0 5-5"/><circle cx="8" cy="6" r="2"/><circle cx="8" cy="16" r="2"/><circle cx="8" cy="26" r="2"/><path class="brand-check" d="m21 19 2.5 2.5L29 16"/></svg></span><span class="brand-copy">CORRIGEN<small>INTEGRITY / IN MOTION</small></span></a>
+      <div class="workspace-label">WORKSPACE</div>
+      <nav class="navigation" aria-label="Primary navigation">
+        <a href="#dashboard" data-page="dashboard"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 20 20"><rect x="3" y="3" width="5" height="5" rx="1"/><rect x="12" y="3" width="5" height="5" rx="1"/><rect x="3" y="12" width="5" height="5" rx="1"/><rect x="12" y="12" width="5" height="5" rx="1"/></svg></span>Dashboard</a>
+        <a href="#sources" data-page="sources"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M5 2.8h7l3.5 3.5v10.9a1 1 0 0 1-1 1h-9a1 1 0 0 1-1-1V3.8a1 1 0 0 1 1-1Z"/><path d="M12 3v4h4M7 11h6M7 14h6"/></svg></span>Source Records</a>
+        <a href="#dependents" data-page="dependents"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 20 20"><rect x="3" y="3" width="14" height="5" rx="1"/><rect x="3" y="12" width="14" height="5" rx="1"/><path d="M6 5.5h.01M6 14.5h.01"/></svg></span>Dependent Records</a>
+        <a href="#students" data-page="students"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 20 20"><circle cx="7" cy="6" r="3"/><path d="M2.5 16v-1a4.5 4.5 0 0 1 9 0v1M14 5.5a2.5 2.5 0 0 1 0 5M14 12a3.5 3.5 0 0 1 3.5 3.5"/></svg></span>Student Testing</a>
+        <a href="#impact" data-page="impact"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 20 20"><circle cx="5" cy="10" r="2"/><circle cx="15" cy="5" r="2"/><circle cx="15" cy="15" r="2"/><path d="m7 9 6-3M7 11l6 3"/></svg></span>Impact Analysis</a>
+        <a href="#approvals" data-page="approvals"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="m4 10 4 4 8-8"/></svg></span>Correction Approvals<span class="nav-count" id="pending-count">0</span></a>
+        <a href="#verification" data-page="verification"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="7"/><path d="m6.8 10 2.1 2.1 4.5-4.5"/></svg></span>Verification Reports</a>
+        <a href="#audit" data-page="audit"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="7"/><path d="M10 6v4l2.8 1.8"/></svg></span>Audit History</a>
+      </nav>
+      <div class="sidebar-bottom"><div class="demo-chip"><span class="pulse-dot"></span><div><strong>Demo workspace</strong><small>Local · SQLite</small></div></div><div class="sidebar-note">Built for transparent, human-reviewed correction workflows.</div></div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar"><button class="mobile-menu" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button><div class="breadcrumb"><span>Workspace</span><b>/</b><strong id="breadcrumb-page">Dashboard</strong></div><div class="topbar-right"><span class="environment-pill" id="system-status"><i></i> SYSTEM OPERATIONAL</span><div class="avatar" title="CORRIGEN Demo Administrator">DA</div><button class="logout-button" id="logout-button" data-action="logout" aria-label="Sign out" title="Sign out"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M8 3H4.5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1H8M12 6l4 4-4 4M16 10H7"/></svg><span>Sign out</span></button></div></header>
+      <section id="app" class="page-content" aria-live="polite" aria-busy="true"><div class="loading-state"><span class="spinner" aria-hidden="true"></span>Loading CORRIGEN workspace…</div></section>
+      <footer class="footer-note">CORRIGEN <span>·</span> Correct Once. Trace Everywhere. Verify Everything. <span>·</span> Registered records only</footer>
+    </main>
+  </div>
+  <div id="toast-region" class="toast-region" aria-live="polite"></div>
+  <dialog id="modal" class="modal"></dialog>
+  <script src="/js/api.js" defer></script>
+  <script src="/js/app.js" defer></script>
+</body>
+</html>

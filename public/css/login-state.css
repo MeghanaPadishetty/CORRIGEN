@@ -1,0 +1,24 @@
+.sign-in-button.is-loading { gap: 9px; }
+.sign-in-button.is-loading .button-label { display: inline; }
+.sign-in-button.is-loading .button-arrow { display: none; }
+.mobile-brand-copy { display: grid; gap: 4px; }
+.mobile-brand-copy small { color: #687780; font-size: 10px; line-height: 1.4; }
+@media (min-width: 681px) and (max-width: 900px) {
+	.login-shell { grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr); }
+	.brand-panel { padding: 26px; }
+	.brand-message { margin-top: 25px; }
+	.brand-message h1 { margin: 15px 0 12px; font-size: 35px; }
+	.brand-description { font-size: 14px; line-height: 1.55; }
+	.brand-tagline { margin-top: 16px; font-size: 12px; }
+	.lineage-illustration { margin: 22px 0 6px; }
+	.form-panel { padding: 22px 28px 16px; }
+	.form-heading { margin-bottom: 20px; }
+	.form-heading h2 { font-size: 29px; }
+	.field-group { margin-bottom: 14px; }
+	.field-group input { height: 47px; }
+	.sign-in-button, .demo-button { height: 48px; }
+	.form-divider { margin: 15px 0; }
+	.demo-note { margin-top: 12px; }
+	.form-legal { margin-top: 12px; }
+	.login-footer { margin-top: 16px; padding-top: 10px; }
+}
